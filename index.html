@@ -58,7 +58,8 @@
             justify-content: center;
             order: 2;
             align-items: center;
-            margin-top: -30px;
+            margin-top: -10px;
+            flex-direction: column;
         }
 
         .header-actions-col {
@@ -1858,13 +1859,15 @@
     <header
         class="header-main header-pos-relative header-single-line header-single-line-mobile header-logo-left fixed-top">
         <div class="header-inner" style="">
+
             <div class="top-bar d-none d-lg-block rhweb-topbar">
-                <div class="twt-usp-bar-container" style="padding: 5px 0;height: 40px;background: #fed700;">
+                <div class="twt-usp-bar-container" style="padding: 8px 0;background: #fed700;">
                     <div class="container">
                         <div class="twt-usp-bar-items"
                             style="justify-content: space-between;display: flex;align-items: center;flex-direction: row;height: 100%;">
+
                             <div class="twt-usp-bar-item twt-usp-1 item-1"
-                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0;min-width: 0;">
                                 <div class="item-icon" style="display: inline-block;text-align: center;">
                                     <i class="fas fa-truck"></i>
                                 </div>
@@ -1904,12 +1907,13 @@
                     </div>
                 </div>
             </div>
+
             <div class="nav-header bg-opacity-100" style="background: rgba(255,255,255, .5);">
                 <div class="container">
                     <div class="header-row row gx-1 align-items-center ">
                         <div class="header-logo-col col-auto col-sm-auto order-1">
                             <div class="header-logo-main">
-                                <a class="logo--link" style="filter:invert(1)" href="https://www.kb-led-leuchten.de/"
+                                <a class="logo--link" style="filter:invert(1);height: 100%;display: block;" href="https://www.kb-led-leuchten.de/"
                                     title="K+B LED Leuchten Shop - zur Startseite wechseln">
                                     <picture>
                                         <source
@@ -1931,9 +1935,16 @@
                         </div>
                         <div
                             class="header-nav-col nav-main d-none d-lg-flex col-lg order-lg-2  nav-main-scroller bg-opacity-100">
-                            <i class="fas fa-phone-alt"></i>
-                            <span style="font-weight: 700;font-size: 14px;line-height: 1.3;">
-                                persliche Berusting<br>+49 6343 93472-0
+
+                            <!-- <i class="fas fa-phone-alt"></i> -->
+                            <span style="letter-spacing:5px;line-height:1;font-weight: 900;font-size:42px;font-family: math;font-style: italic;display:block;color: #fff;text-shadow: 0 0 10px BLACK;">
+                                LED LEUCHTEN
+                                <!-- persliche Berusting<br>+49 6343 93472-0 -->
+                            </span>
+                            
+                            <span style="letter-spacing: 1.5px;font-weight: 700;font-size:14px;font-family: 'Open Sans';display:block;color: #fff;text-shadow: 0 0 10px black;">
+                                LIGHTING PROFESSIONAL SOLUTIONS
+                                <!-- persliche Berusting<br>+49 6343 93472-0 -->
                             </span>
                         </div>
                         <div class="header-actions-col col-auto order-3 order-md-4  ms-sm-0">
@@ -2137,7 +2148,7 @@
                                                         position: fixed;
                                                         z-index: 0;
                                                         left: 0;
-                                                        top: 40px;" src="video/kb-led.mp4" type="video/mp4"
+                                                        top: 35px;" src="video/kb-led.mp4" type="video/mp4"
                                                         muted="muted" autoplay="autoplay" loop>
                                                     </video>
                                                 </div>
