@@ -14,6 +14,69 @@
 <body class="is-ctl-navigation is-act-home  rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay 
   rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay custom-cookie-active">
     <style>
+        .header-logo-main {
+            top: -10px;
+            /* width: 250px; */
+            /* height: 150px; */
+            border-bottom: 200px solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 0 solid transparent;
+            border-left: 250px solid #fed700;
+            /* filter: drop-shadow(0px 0px 5px #fed700); */
+            /* animation: myAnim 2s cubic-bezier(0.11, 0, 0.5, 0) 0s infinite normal forwards; */
+            position: relative;
+            top: -10px;
+            display: block;
+            left: 0;
+            z-index: 0;
+            transform: scaleX(1.5) skewX(10deg);
+        }
+        .logo--link {
+            filter: invert(1);
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -185px;
+            /* width: 100px; */
+        }
+        .logo--link picture img{
+            z-index: 99999999;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: -35px;
+            top: 0;
+        }
+        @keyframes myAnim {
+            0% {
+                /* opacity: 1; */
+                filter: drop-shadow(0px 0px 5px #fed700);
+            }
+
+            50% {
+                /* opacity: 0.2; */
+                filter: drop-shadow(0px 0px 5px #fff);
+            }
+
+            100% {
+                /* opacity: 1; */
+                filter: drop-shadow(0px 0px 5px #fed700);
+            }
+        }
+
+        .pos-5 .cms-element-rhweb-cta-banner.box-center .overlay {
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 0px 53px #0000003b inset, 9px 18px 7px #00000052;
+            border-radius: 6%;
+            padding: 42px;
+        }
+        .cms-block .cms-block-container .cms-block-container-row {
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+        }
         .cms-element-rhweb-cta-banner.usp-active .container-content {
             display: flex;
             flex-direction: column;
@@ -63,7 +126,7 @@
         }
 
         .header-actions-col {
-            margin-top: -30px;
+            margin-top: -115px;
         }
 
         .fa-phone-alt {
@@ -75,10 +138,10 @@
             background-color: transparent;
         }
 
-        .nav-header {
+        /* .nav-header {
             background: rgba(255, 255, 255, .5);
             height: 102px;
-        }
+        } */
 
         .header-row {
             padding: 0.5rem 0 !important;
@@ -125,7 +188,9 @@
         .footer-main .footer-bottom a {
             color: #ffffff;
         }
-
+        .footer-main .footer-column .footer-column-content .footer-contact-hotline a, .footer-main .footer-column .footer-column-content .footer-contact-form a {
+            color: #bdbdbd;
+        }
 
 /*----------------*/
                                         .emotion--element {
@@ -374,6 +439,7 @@
             opacity: 1;
             overflow: hidden;
             transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
+            box-shadow: 0px 26px 20px #6c6c6c;
         }
 
         .kacheln .boxen .box .box-inner {
@@ -491,11 +557,11 @@
         }
 
         .pos-2.cms-section-default .col-md-3{
-            width: 33.33333333% !important;
-                padding-left: 1.25rem;
-                padding-bottom: 1.25rem;
+            width: 31% !important;
+            padding: 0;
                 height: 10.3448%;
                 top: 27.5862%;
+                box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
         }
 
 
@@ -1866,15 +1932,15 @@
                         <div class="twt-usp-bar-items"
                             style="justify-content: space-between;display: flex;align-items: center;flex-direction: row;height: 100%;">
 
-                            <div class="twt-usp-bar-item twt-usp-1 item-1"
-                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0;min-width: 0;">
+                            <div class="twt-usp-bar-item twt-usp-4 item-4"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
                                 <div class="item-icon" style="display: inline-block;text-align: center;">
-                                    <i class="fas fa-truck"></i>
+                                    <i class="fas fa-phone-volume"></i>
                                 </div>
                                 <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
-                                    <div class="item-title">Kostenloser Versand ab € 50,- Bestellwert</div>
+                                    <div class="item-title">Kostenlose Hotline +49 6343 93472-0</div>
                                 </div>
-                            </div>
+                            </div>                            
                             <div class="twt-usp-bar-item twt-usp-2 item-2"
                                 style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
                                 <div class="item-icon" style="display: inline-block;text-align: center;">
@@ -1893,13 +1959,13 @@
                                     <div class="item-title">5 Jahre Garantie</div>
                                 </div>
                             </div>
-                            <div class="twt-usp-bar-item twt-usp-4 item-4"
-                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0 20px;min-width: 0;">
+                            <div class="twt-usp-bar-item twt-usp-1 item-1"
+                                style="color: #000;flex-direction: row;display: flex; font-size: 14px;font-weight: 400;align-items: center;text-transform: none;padding:0;min-width: 0;">
                                 <div class="item-icon" style="display: inline-block;text-align: center;">
-                                    <i class="fas fa-phone-volume"></i>
+                                    <i class="fas fa-truck"></i>
                                 </div>
                                 <div class="item-label" style="display: inline-block;width: 100%;margin-left:5px;">
-                                    <div class="item-title">Kostenlose Hotline +49 6343 93472-0</div>
+                                    <div class="item-title">Kostenloser Versand ab € 50,- Bestellwert</div>
                                 </div>
                             </div>
 
@@ -1908,14 +1974,14 @@
                 </div>
             </div>
 
-            <div class="nav-header bg-opacity-100" style="background: rgba(255,255,255, .5);">
+            <div class="nav-header bg-opacity-100">
                 <div class="container">
                     <div class="header-row row gx-1 align-items-center ">
                         <div class="header-logo-col col-auto col-sm-auto order-1">
                             <div class="header-logo-main">
-                                <a class="logo--link" style="filter:invert(1);height: 100%;display: block;" href="https://www.kb-led-leuchten.de/"
+                                <a class="logo--link" href="https://www.kb-led-leuchten.de/"
                                     title="K+B LED Leuchten Shop - zur Startseite wechseln">
-                                    <picture>
+                                    <picture style="">
                                         <source
                                             srcset="https://www.kb-led-leuchten.de/media/vector/78/47/d6/logo-white.svg"
                                             media="(min-width: 78.75em)">
@@ -1937,7 +2003,12 @@
                             class="header-nav-col nav-main d-none d-lg-flex col-lg order-lg-2  nav-main-scroller bg-opacity-100">
 
                             <!-- <i class="fas fa-phone-alt"></i> -->
-                            <span style="letter-spacing:5px;line-height:1;font-weight: 900;font-size:42px;font-family: math;font-style: italic;display:block;color: #fff;text-shadow: 0 0 10px BLACK;">
+                            <span style="letter-spacing:5px;line-height:1;font-weight: 900;font-size:42px;font-family: math;font-style: italic;display:block;color: #fff;text-shadow: 0 0 10px BLACK;background-color: #b9b9b9;
+                            -webkit-background-clip: text;
+                            -moz-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            text-shadow: 2px 2px 2px rgba(255,255,255,0.3);">
                                 LED LEUCHTEN
                                 <!-- persliche Berusting<br>+49 6343 93472-0 -->
                             </span>
@@ -2229,7 +2300,7 @@
                             <div class="cms-section-default boxed">
                                 <div class="cms-block bg-color  pos-0 cms-block-rhweb-service-area-service-area-four-columns"
                                     style=" background-color: #fafafa;">
-                                    <div class="cms-block-container " style="padding: 20px 20px 80px 20px;">
+                                    <div class="cms-block-container " style="padding: 70px 0px 150px;">
                                         <div class="cms-block-container-row row cms-row ">
                                             <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" data-cms-element-id="">
                                                 <div id="rhweb5a2c741c0ee2f9332ee93c5c2352be06"
@@ -2313,7 +2384,7 @@
                                     </style>
 
                                     <div class="cms-block-container rhweb-block-offset-top-50 rhweb-block-offset"
-                                        style="padding: 20px 20px 20px 20px;">
+                                        style="padding: 20px 0;">
                                         <div class="cms-block-container-row row cms-row ">
                                             <div class="col-md-3"
                                                 data-cms-element-id="779e615e0095d7f8eca69312c28ec869">
@@ -2461,7 +2532,7 @@
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-25 cms-section-default">
+                        <div class="cms-section  pos-25 cms-section-default" style="padding: 50px 0 0;">
                             <div class="cms-section-default boxed">
                                 <div class="" style="padding:50px 1.25rem;position:relative;"> 
                                     <div class="emotion--html"> 
@@ -2470,16 +2541,20 @@
                                         text-decoration: none !important;
                                         margin: 0px 20px 0px 20px;
                                         margin: 0rem 1.25rem 0rem 1.25rem;
-                                        font-size: 16px;
                                         display: block;
                                         font-weight: 700;
-                                        color: #2b323a;"> 
-                                            <div style="color: #000; text-align:center;">
-                                                Das intelligente LED-Lichtsystem für alle Arbeits- und Verkehrsbereiche Ihres Unternehmen
-                                            </div> 
+                                        color: #000; 
+                                        text-align:center;
+                                            background-clip: text;
+                                            color: #ffffff;
+                                            text-shadow: 1px 1px 2px rgb(0 0 0),-1px -1px 2px rgb(0 0 0),1px -1px 2px rgb(0 0 0),-1px 1px 2px rgb(0 0 0);
+                                            font-size: 18px;
+                                            letter-spacing: 1px;">                                             
+                                                Das intelligente LED-Lichtsystem für alle Arbeits - und Verkehrsbereiche Ihres Unternehmen
+                                             
                                         </div> 
                                         <div class="html--content"> 
-                                            <p style="text-align: center;">
+                                            <p style="text-align: center;margin-top: 10px;">
                                                 <span style="font-size: medium;" data-mce-mark="1">
                                                     Mit unserem neuen <strong>KB SILVERLINE.PRO LED LEUCHTEN</strong> decken wir alle Beleuchtungsanforderungen Ihres Unternehmens ab: Von der Verwaltung bis zu Produktion und Lager bringt unser System die erforderliche Lichtstärke und Farbtemperatur in Verkehrsbereiche und auf Arbeitsplätze. </span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Elegant im Design, durchdacht konstruiert, variabel, einfach in der Montage und&nbsp;<strong>„Made in Germany“</strong>.</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Verschiedene Längen kombinierbar einfach erweiterbar, auch nachträglich!</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">
                                                         <strong>Schön, schlank und anwenderfreundlich: KB SILVERLINE.PRO LED LEUCHTEN - die helle Freude!</strong>
@@ -2491,9 +2566,9 @@
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-3 cms-section-default">
+                        <div class="cms-section  pos-3 cms-section-default" style="padding: 50px 0;">
                             <div class="cms-section-default boxed">
-                                <section class="kacheln"> <div class="boxen" style="position"> 
+                                <section class="kacheln"> <div class="boxen" style=""> 
                                     <div class="box box-leistung"> 
                                         <div class="box-inner"> 
                                             <div class="box-leistung--img" style="height: 500px;"> 
@@ -2598,13 +2673,10 @@
 
                         <div class="cms-section  pos-2 cms-section-default">
                             <div class="cms-section-default boxed">
-                                <div class="cms-block pos-0 cms-block-image-four-column" style="">
-                                    <style type="text/css">
-
-                                    </style>
+                                <div class="cms-block pos-0 cms-block-image-four-column">
 
                                     <div class="cms-block-container rhweb-block-offset-top-50 rhweb-block-offset"
-                                        style="padding: 0px 0px 100px 0px;">
+                                        style="padding: 50px 0px 100px 0px;">
                                         <div class="cms-block-container-row row cms-row ">
                                             <div class="col-md-3"
                                                 data-cms-element-id="779e615e0095d7f8eca69312c28ec869">
@@ -3126,7 +3198,7 @@
                         aria-labelledby="collapseFooterHotlineTitle" role="listitem">
                         <div class="footer-column-content-inner">
                             <p class="footer-contact-hotline">
-                                Unterstützung und Beratung unter: <a href="tel:+49180000000">0180 - 000000</a> Mo-Fr,
+                                elefonische Unterstützung und Beratung unter: <a href="tel:+49634393472">+49 6343 93472-0</a> Mo-Fr,
                                 09:00 - 17:00 Uhr
                             </p>
                         </div>
@@ -3142,7 +3214,7 @@
                     <div class="footer-column-headline footer-headline js-collapse-footer-column-trigger"
                         data-bs-target="#collapseFooterTitle1" aria-expanded="true" aria-controls="collapseFooter1">
                         <a href="https://tronic.shopware-theme.de/Shop-Info/" title="Shop Info">
-                            Shop Info
+                            Shop Servise
                         </a>
                         <div class="footer-column-toggle">
                             <span class="footer-plus-icon">
