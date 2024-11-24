@@ -120,16 +120,20 @@
             white-space: nowrap;
             font-size: 19px;
             margin-top: 40px;
-            margin-bottom: 15px;
+            /* margin-bottom: 15px; */
             text-align: center;
             color: #666;
-            border-bottom: 1px solid;
+            /* border-bottom: 1px solid;
             padding-bottom: 15px;
             width: 50%;
+            transition: all .3s ease-in-out; */
+        }
+        .infoled hr {
+            width: 20%;
             transition: all .3s ease-in-out;
         }
-        .info-place:hover .infoled h3 {
-             width: 20%;
+        .info-place:hover .infoled hr {
+             width: 50%;
              transition: all .3s ease-in-out;
         }
         .infoled-btn{
@@ -141,7 +145,11 @@
             border: none;
             font-size: 1.1rem;
             box-shadow: 0px 9px 7px #000000a8, 0px 0px 9px #000 inset;
-            border-radius: 27%;
+            border-radius: 25%;
+            transition: all .3s ease-in-out;
+        }
+        .infoled-btn:hover {
+            box-shadow: 0px 9px 7px #000000a8, 0px 0px 19px #000 inset;
             transition: all .3s ease-in-out;
         }
         .info-place:hover .infoled-btn a{
@@ -208,6 +216,7 @@
         }
 
         .pos-5 .cms-element-rhweb-cta-banner.box-center .overlay {
+            height: 230px;
             display: flex;
             align-items: center;
             box-shadow: 0px 0px 53px #0000003b inset, 9px 18px 7px #00000052;
@@ -703,8 +712,12 @@
                 height: 10.3448%;
                 top: 27.5862%;
                 box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+                transition: all .3s ease-in-out;
         }
-
+        .pos-2.cms-section-default .col-md-3:hover {
+            box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
+            transition: all .3s ease-in-out;
+        }
 
         .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner-blur {
             opacity: 1;
@@ -1445,6 +1458,7 @@
                                         
                                         <div class="infoled"> 
                                             <h3>Höchste Qualität</h3> 
+                                            <hr>
                                             <p class="infoled-p"> Gesundes Licht ist eine Frage der Zutaten<br> Zutaten für die <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind sowohl die herausragende Qualität der verwendeten LED als auch ein jahrzehntelanges Know-how in Elektronik und Steuerungstechnik. Damit schaffen unsere <strong>LED-Leuchtensysteme</strong> homogenes, flimmerfreies Arbeitslicht über die gesamte Lebensdauer der Leuchtmittel. </p>
                                             <div style="width: 100%;margin: auto;"> 
                                                 <button class="infoled-btn"> 
@@ -1464,9 +1478,8 @@
                                         </div> 
                                         
                                         <div class="infoled"> 
-                                            <h3>
-                                                Persönliche Beratung
-                                            </h3> 
+                                            <h3> Persönliche Beratung</h3> 
+                                            <hr>
                                             <p class="infoled-p"> 
                                                 Zögern Sie nicht - jetzt Kontakt aufnehmen und kostenlos beraten lassen! 
                                                 Rufen Sie uns jetzt an:
@@ -1498,9 +1511,8 @@
                                             </div> 
                                         </div>                                          
                                         <div class="infoled"> 
-                                            <h3>
-                                                Nachhaltig
-                                            </h3> 
+                                            <h3>Nachhaltig</h3> 
+                                            <hr>
                                             <p class="infoled-p"> Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten. </p>
                                             <div style="width: 100%;margin: auto;"> 
                                                 <button class="infoled-btn"> 
