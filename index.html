@@ -14,6 +14,27 @@
 <body class="is-ctl-navigation is-act-home  rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay 
   rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay custom-cookie-active">
     <style>
+        .newsletter {
+            z-index: 9999;
+            background-color: #fed700;
+            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
+            background-size: 10px 10px;
+            box-shadow: 0px -2px 7px #000000de, 0px 14px 21px #00000075 inset;
+            border-top: 1px solid #000;
+            padding: 80px 0;
+        }
+        .newsletter .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .newsletter-r {
+            order: 2;
+        }
+        .newsletter-l .fas {
+            font-size: 135px;
+        }
         .rhweb-footer-newsletter-container .privacy-notice {
             padding: 10px 40px;
             border-radius: 0;
@@ -21,12 +42,7 @@
             font-size: 0.9em;
         }
         .rhweb-footer-newsletter-container {
-            background-color: #fed700;
-            z-index: 1;
-            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
-            background-size: 10px 10px;
-            box-shadow: 0px -2px 7px #000000de, 0px 14px 21px #00000075 inset;
-            border-top: 1px solid #000;
+            
         }
         .hero-title{
             margin-top: 20px;
@@ -308,7 +324,7 @@
         }
 
         .footer-main {
-            z-index: 1;
+            z-index: 99;
             position: relative;
             --rhweb-footer-socials-size: 35px;
             --rhweb-footer-logo-gap: 10px;
@@ -1222,7 +1238,7 @@
 
                         <div class="cms-section  pos-2 cms-section-default">
                             <div class="cms-section-default boxed">
-                                <div class="cms-block pos-0 cms-block-image-four-column" style="">
+                                <div class="cms-block pos-0 cms-block-image-four-column">
                                      <div class="cms-block-container rhweb-block-offset-top-50 rhweb-block-offset"
                                         style="padding: 20px 0;">
                                         <div class="cms-block-container-row row cms-row ">
@@ -1940,66 +1956,71 @@
             </div>
         </div>
     </main>
-    <div class="rhweb-footer-newsletter-container footer-above" style="z-index:9999">
+    <div class="newsletter rhweb-footer-newsletter-container footer-above">
         <div class="container">
-            <div class="infotext">
-                <div class="h3 newsletter-headline">Newsletter</div>
-                <p>Abonnieren Sie jetzt unseren regelmäßig erscheinenden Newsletter, um rechtzeitig über neue Produkte
-                    und Angebote informiert zu werden.</p>
-            </div>
-            <div class="cms-block cms-block-form">
-                <div class="cms-element-form">
-                    <form action="/form/newsletter" method="post" data-form-csrf-handler="true"
-                        data-form-validation="true">
-                        <div class="rhweb-newsletter-form-container">
-                            <div class="form-group ">
-                                <label class="form-label" for="form-email">E-Mail-Adresse* </label>
-                                <input name="email" type="email" id="form-email" value=""
-                                    placeholder="E-Mail-Adresse eingeben ..." required="required" class="form-control">
-                            </div>
-                            <button type="submit" aria-label="Submit" class="btn">
-                                <span class="icon icon-arrow-right">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="24" height="24" viewBox="0 0 24 24">
-                                        <defs>
-                                            <path
-                                                d="m20.5858 13-4.293 4.2929c-.3904.3905-.3904 1.0237 0 1.4142.3906.3905 1.0238.3905 1.4143 0l6-6c.3905-.3905.3905-1.0237 0-1.4142l-6-6c-.3905-.3905-1.0237-.3905-1.4142 0-.3905.3905-.3905 1.0237 0 1.4142L20.5858 11H1c-.5523 0-1 .4477-1 1s.4477 1 1 1h19.5858z"
-                                                id="icons-default-arrow-right"></path>
-                                        </defs>
-                                        <use xlink:href="#icons-default-arrow-right" fill="#758CA3" fill-rule="evenodd">
-                                        </use>
-                                    </svg>
-                                </span> </button>
-                        </div>
-                        <div class="rhweb-captcha-container">
-                            <div class="shopware_surname_confirm">
-                                <input type="text" name="shopware_surname_confirm" class="d-none" value="" tabindex="-1"
-                                    autocapitalize="off" spellcheck="false" autocorrect="off" autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="rhweb-newsletter-privacy">
-                            <div>Datenschutz*</div>
-                            <div class="form-text privacy-notice form-check">
-                                <input name="privacy" type="checkbox" class="form-check-input" id="form-privacy-opt-in-"
-                                    required="">
-                                <label for="form-privacy-opt-in-" class="form-check-label">
-                                    Ich habe die <a data-ajax-modal="true"
-                                        data-url="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
-                                        href="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
-                                        title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> zur Kenntnis
-                                    genommen und die <a data-ajax-modal="true"
-                                        data-url="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3"
-                                        href="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3" title="AGB">AGB</a> gelesen
-                                    und bin mit ihnen einverstanden.
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-hidden-fields">
-                            <input type="hidden" name="option" value="subscribe">
-                            <input type="submit" class="submit--hidden d-none">
-                        </div>
-                    </form>
+            <div class="newsletter-r">
+                <div class="infotext">
+                    <div class="h3 newsletter-headline">Newsletter</div>
+                    <p>Abonnieren Sie jetzt unseren regelmäßig erscheinenden Newsletter, um rechtzeitig über neue Produkte
+                        und Angebote informiert zu werden.</p>
                 </div>
+                <div class="cms-block cms-block-form">
+                    <div class="cms-element-form">
+                        <form action="/form/newsletter" method="post" data-form-csrf-handler="true"
+                            data-form-validation="true">
+                            <div class="rhweb-newsletter-form-container">
+                                <div class="form-group ">
+                                    <label class="form-label" for="form-email">E-Mail-Adresse* </label>
+                                    <input name="email" type="email" id="form-email" value=""
+                                        placeholder="E-Mail-Adresse eingeben ..." required="required" class="form-control">
+                                </div>
+                                <button type="submit" aria-label="Submit" class="btn">
+                                    <span class="icon icon-arrow-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                                <path
+                                                    d="m20.5858 13-4.293 4.2929c-.3904.3905-.3904 1.0237 0 1.4142.3906.3905 1.0238.3905 1.4143 0l6-6c.3905-.3905.3905-1.0237 0-1.4142l-6-6c-.3905-.3905-1.0237-.3905-1.4142 0-.3905.3905-.3905 1.0237 0 1.4142L20.5858 11H1c-.5523 0-1 .4477-1 1s.4477 1 1 1h19.5858z"
+                                                    id="icons-default-arrow-right"></path>
+                                            </defs>
+                                            <use xlink:href="#icons-default-arrow-right" fill="#758CA3" fill-rule="evenodd">
+                                            </use>
+                                        </svg>
+                                    </span> </button>
+                            </div>
+                            <div class="rhweb-captcha-container">
+                                <div class="shopware_surname_confirm">
+                                    <input type="text" name="shopware_surname_confirm" class="d-none" value="" tabindex="-1"
+                                        autocapitalize="off" spellcheck="false" autocorrect="off" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="rhweb-newsletter-privacy">
+                                <div>Datenschutz*</div>
+                                <div class="form-text privacy-notice form-check">
+                                    <input name="privacy" type="checkbox" class="form-check-input" id="form-privacy-opt-in-"
+                                        required="">
+                                    <label for="form-privacy-opt-in-" class="form-check-label">
+                                        Ich habe die <a data-ajax-modal="true"
+                                            data-url="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
+                                            href="/widgets/cms/018cf30c8773716d8221105ad7f2cd9a"
+                                            title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> zur Kenntnis
+                                        genommen und die <a data-ajax-modal="true"
+                                            data-url="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3"
+                                            href="/widgets/cms/018cf30c87717112a2b10d9c5d2fa8b3" title="AGB">AGB</a> gelesen
+                                        und bin mit ihnen einverstanden.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-hidden-fields">
+                                <input type="hidden" name="option" value="subscribe">
+                                <input type="submit" class="submit--hidden d-none">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter-l">
+                <i class="fas fa-mail-bulk"></i>
             </div>
         </div>
     </div>
