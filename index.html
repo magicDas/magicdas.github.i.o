@@ -11,9 +11,141 @@
 
 </head>
 
-<body class="is-ctl-navigation is-act-home  rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay 
-  rhweb-custom-cookie rhweb-cms-image-animation rhweb-cms-image-overlay custom-cookie-active">
+<body class="is-ctl-navigation is-act-home">
     <style>
+        .section.desc .desc--title{
+            padding: 20px 0px 10px 0px;
+            border-bottom: 1px solid #000;            
+            margin: 0rem 1.25rem 0rem 1.25rem;
+            display: block;            
+            text-align:center;
+            background-clip: text;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgb(0 0 0),-1px -1px 2px rgb(0 0 0),1px -1px 2px rgb(0 0 0),-1px 1px 2px rgb(0 0 0);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+        }
+        .section.desc .desc--content {
+            margin-top: 10px;
+            font-size: medium;
+        }
+        .section.desc .blocks .block-item {
+            background-color: transparent;
+            position: relative;
+            height: 250px;
+            width: 100% !important; 
+            padding: 0;
+            text-align: center;
+            /* box-shadow: 0px 0px 400px #fed700; */
+            box-shadow: none;
+            transition: all .3s ease-in-out;
+        }
+        .section.benefits {
+            padding: 160px 0 80px;
+        }
+
+
+        .section-separator-bottom {
+                            --rhweb-svg-separator-top-size: 50px;
+                            --rhweb-svg-separator-bottom: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%20viewBox%3D%220%200%20476.62%20100.69%22%3E%3Cpath%20%20d%3D%22M476.62%20100.69V0l-238.3%2095.47L0%200v100.69Z%22%2F%3E%3C%2Fsvg%3E');
+                            --rhweb-svg-separator-bottom-size: 50px;
+                        }
+        .section[class*="section-separator-bottom"]:after {
+            transform: rotate(180deg);
+            bottom: -50px;
+            content: "";
+            position: absolute;
+            z-index: 0;
+            min-height: 50px;
+            width: 100%;
+            -webkit-mask-image: var(--rhweb-svg-separator-bottom);
+            -webkit-mask-size: cover;
+            mask-image: var(--rhweb-svg-separator-bottom);
+            mask-size: cover;
+            background-image: var(--rhweb-svg-separator-bottom);
+            background: initial;
+            background-color: inherit;
+            margin-bottom: 0.5px;
+            background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.3) 52%, transparent 52%);
+            background-size: 10px 10px;
+            transition: all .35s ease-in-out;
+        }
+        .section{
+            padding: 80px 0;
+            position: relative;
+        }
+        .section .container{
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        .section-group{
+            background-color: #fafafa;
+            z-index: 1;
+            position: relative;
+        }
+        .section .container .blocks {
+            display: flex;
+            width: 100%;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .blocks .block-item{
+            position: relative;
+            height: 250px;
+            width: 340px;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            transition: all .3s ease-in-out;
+        }
+        .blocks .block-item:hover {
+            /* box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a; */
+            transition: all .3s ease-in-out;
+        }
+        .blocks .block-item.bg-img {
+            width: 80%;
+            margin: 10px;
+        }
+        .block-item .overlay {
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            /* background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(0, 0, 0, .08) 48%, rgba(0, 0, 0, .8) 52%, transparent 52%);
+            background-size: 6px 6px; */
+        }
+        .block-item .overlay .txt p {
+            height: 40px;
+            overflow: hidden;
+        }
+        .block-item .overlay i {
+            position: absolute !important;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15em !important;
+            opacity: .06 !important;
+        }
+
+        .block-item .overlay .h4 {
+            font-weight: 700;
+            line-height: 24px;
+            font-size: 1.19rem;
+            margin-bottom: 10px;
+            margin-top: 23px;
+            color: #161e22;
+            height: 60px;
+        }
+
+
+
+
         .newsletter {
             z-index: 9999;
             background-color: #fed700;
@@ -41,14 +173,12 @@
             background-color: transparent;
             font-size: 0.9em;
         }
-        .rhweb-footer-newsletter-container {
-            
-        }
+ 
         .hero-title{
             margin-top: 20px;
             line-height: 1.1;
             color: #000000;
-            font-size: 45px;
+            font-size: 38px;
             font-weight: 900;
             text-align: center;
             /* box-shadow: 0px 0px 5px #fff inset; */
@@ -60,7 +190,7 @@
             background-size: 10px 10px;
             box-shadow: 0px 10px 20px #000, 0px 28px 30px #00000045 inset, -16px 28px 30px #fed700 inset, 16px 28px 30px #fed700 inset;
         }
-        .cms-section[class*="rhweb-section-separator-bottom"]:after {
+        .section[class*="rhweb-section-separator-bottom"]:after {
             transform: rotate(180deg);
             bottom: calc(var(--rhweb-svg-separator-bottom-size) * -1);
             content: "";
@@ -85,6 +215,8 @@
             padding-bottom: 1.25rem; 
             height: 17.2414%; 
             top: 10.3448%;
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
+            transition: all .3s ease-in-out;
         }
         .leyba {
             position: relative;
@@ -231,16 +363,7 @@
             }
         }
 
-        .pos-5 .cms-element-rhweb-cta-banner.box-center .overlay {
-            height: 230px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0px 0px 53px #0000003b inset, 9px 18px 7px #00000052;
-            border-radius: 6%;
-            padding: 42px;
-            background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(0, 0, 0, .3) 48%, rgba(0, 0, 0, .3) 52%, transparent 52%);
-            background-size: 6px 6px;
-        }
+        
         .cms-block .cms-block-container .cms-block-container-row {
             justify-content: space-around;
             width: 100%;
@@ -253,12 +376,7 @@
             align-items: center;
         }
 
-        .cms-element-rhweb-cta-banner.usp-active .container-content i {
-            margin-right: 0;
-            font-size: 2.6em;
-            padding: 15px 5px;
-        }
-
+        
         header .header-actions-btn {
             margin-left: 10px;
         }
@@ -277,6 +395,14 @@
         .d-lg-block {
             display: block;
             order: 3;
+        }
+
+        .header-main {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1 !important;
         }
 
         header .header-row .header-logo-col {
@@ -304,20 +430,15 @@
             background-color: transparent;
         }
 
-        /* .nav-header {
-            background: rgba(255, 255, 255, .5);
-            height: 102px;
-        } */
-
         .header-row {
             padding: 0.5rem 0 !important;
         }
 
-        .cms-block:has(.rhweb-block-offset):has(.rhweb-block-offset-top-50) {
+        /* .cms-block:has(.rhweb-block-offset):has(.rhweb-block-offset-top-50) {
             top: -10px !important;
-        }
+        } */
 
-        .cms-sections .cms-section .cms-section-default .cms-block {
+        .sections .section .section-oc .cms-block {
             background-color: rgba(0, 0, 0, 0);
             border: 1px solid rgba(255, 255, 255, 0);
             margin-bottom: 0px;
@@ -395,15 +516,11 @@
                                         button.btn.btn-leistung:hover {
                                             background: #5f7285 !important;
                                         }
+                                     
+                                        .boxen {
 
-                                        .kacheln {
-                                            margin-top: 0;
-                                            height: 100%;
-                                        }
-
-                                        .kacheln .boxen {
-                                            display: -webkit-flex;
-                                            display: flex;
+                                        display: -webkit-flex;
+                                        display: flex;
                                             flex-wrap: wrap;
                                             -webkit-flex-wrap: wrap;
                                             flex-direction: row;
@@ -416,10 +533,10 @@
                                             -webkit-align-items: stretch;
                                             height: 100%;
                                         }
+                                        .boxen .box {
 
-                                        .kacheln .boxen .box {
-                                            width: 100%;
-                                            height: 100%;
+                                        width: 100%;
+                                        height: 100%;
                                             display: block;
                                             align-self: stretch;
                                             visibility: visible;
@@ -427,26 +544,26 @@
                                             overflow: hidden;
                                             transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
                                         }
+                                        .boxen .box .box-inner {
 
-                                        .kacheln .boxen .box .box-inner {
-                                            height: 100%;
-                                            margin-right: 0;
+                                        height: 100%;
+                                        margin-right: 0;
                                             background: white;
                                             position: relative;
                                             display: block;
                                             overflow: hidden;
                                             transition: all .55s;
                                         }
+                                        .boxen .box .box-inner .box-leistung--img {
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--img {
-                                            transition: .55s ease;
-                                            position: relative;
+                                        transition: .55s ease;
+                                        position: relative;
                                             height: 250px;
                                         }
+                                        .boxen .box .box-inner .box-leistung--img .box-leistung-img-hover {
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--img .box-leistung-img-hover {
-                                            position: absolute;
-                                            top: 0;
+                                        position: absolute;
+                                        top: 0;
                                             left: 0;
                                             right: 0;
                                             bottom: -8px;
@@ -456,10 +573,10 @@
                                             z-index: 1;
                                             transition: all .55s;
                                         }
+                                        .boxen .box .box-inner .box-leistung--content {
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content {
-                                            margin: 0 12.5%;
-                                            display: flex;
+                                        margin: 0 12.5%;
+                                        display: flex;
                                             justify-content: center;
                                             align-items: center;
                                             align-content: center;
@@ -475,10 +592,10 @@
                                             transform: translate(0, 50%);
                                             transition: all .55s;
                                         }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner-blur {
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner-blur {
-                                            position: absolute;
-                                            top: -17.5%;
+                                        position: absolute;
+                                        top: -17.5%;
                                             right: -17.5%;
                                             bottom: -17.5%;
                                             left: -17.5%;
@@ -493,10 +610,10 @@
                                             opacity: 0;
                                             transition: all .55s;
                                         }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner {
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner {
-                                            display: flex;
-                                            flex-direction: column;
+                                        display: flex;
+                                        flex-direction: column;
                                             justify-content: flex-start;
                                             align-items: center;
                                             align-content: center;
@@ -513,12 +630,12 @@
                                             left: 0;
                                             transition: all .55s;
                                         }
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h1,
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h1,
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h2,
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3,
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h4,
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h5,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h2,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h4,
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner h5,
                                         .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h6 {
                                             font-size: 0.8rem;
                                             color: white;
@@ -531,13 +648,13 @@
                                             transition: all .55s;
                                         }
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
                                             max-height: 0;
                                             transition: all .55s;
                                             padding-bottom: 0;
                                         }
 
-                                        .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner p {
+                                        .boxen .box .box-inner .box-leistung--content .box-leistung--inner p {
                                             opacity: 0;
                                             color: white;
                                             margin-bottom: 0;
@@ -550,7 +667,7 @@
                                             transition: all .55s;
                                         }
 
-                                        .kacheln .boxen .box .box-inner .box-leistung---link-container {
+                                        .boxen .box .box-inner .box-leistung---link-container {
                                             position: absolute;
                                             background: transparent;
                                             bottom: 30px;
@@ -560,7 +677,7 @@
                                             display: block;
                                         }
 
-                                        .kacheln .boxen .box .box-inner .box-leistung---link-container .btn-leistung {
+                                        .boxen .box .box-inner .box-leistung---link-container .btn-leistung {
                                             z-index: 12;
                                             background: white;
                                             padding: .5rem 2rem;
@@ -722,18 +839,7 @@
             display: block;
         }
 
-        .pos-2.cms-section-default .col-md-3{
-            width: 31% !important;
-            padding: 0;
-                height: 10.3448%;
-                top: 27.5862%;
-                box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
-                transition: all .3s ease-in-out;
-        }
-        .pos-2.cms-section-default .col-md-3:hover {
-            box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
-            transition: all .3s ease-in-out;
-        }
+
 
         .kacheln .boxen .box-leistung .box-inner:hover .box-leistung--inner-blur {
             opacity: 1;
@@ -1058,16 +1164,17 @@
         </div>
     </header>
 
-    <main class="content-main">
+    <main>
         <div class="container-main">
-            <div class="cms-page">
-                <div class="cms-sections">
-                    <div class="cms-section pos-0 cms-section-default" style="">
-                        <div class="cms-section-default full-width">
-                            <div class="cms-block pos-0 cms-block-image-cover" style="">
-                                <div class="cms-block-container " style="">
+            <!-- <div class="cms-page">
+                <div class="sections"> -->
+
+                    <div class="section hero">
+                        <div class="section-oc full-width">
+                            <div class="cms-block pos-0 cms-block-image-cover">
+                                <div class="cms-block-container">
                                     <div class="cms-block-container-row row cms-row">
-                                        <div class="col-12" data-cms-element-id="78da946a7ac79291629be31d6cbff71f">
+                                        <div class="col-12">
                                             <div class="w-100" style="padding: 0;">
                                                 <div class="html5-video-container" data-layer="0"
                                                     style="position:relative;height:100vh;overflow:hidden;">
@@ -1125,294 +1232,193 @@
                             </div>
                         </div>
                     </div>
-                    <style type="text/css">
-                        .rhweb-section-2cc0b61df83476a51924571f8c762554 {
-                            --rhweb-svg-separator-top-size: 50px;
-                            --rhweb-svg-separator-bottom: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%20viewBox%3D%220%200%20476.62%20100.69%22%3E%3Cpath%20%20d%3D%22M476.62%20100.69V0l-238.3%2095.47L0%200v100.69Z%22%2F%3E%3C%2Fsvg%3E');
-                            --rhweb-svg-separator-bottom-size: 50px;
-                        }
-                    </style>
-                    <div style="background-color: #fafafa;z-index: 9999;position: relative;">
 
-                        <div class="title-h1 cms-section rhweb-section-2cc0b61df83476a51924571f8c762554 rhweb-section-separator-bottom-50 bg-color  pos-1 cms-section-default">
-                            <div class="cms-section-default boxed">
-                                <div class="cms-block bg-color  pos-0 cms-block-rhweb-brand-slider">
-                                    <div class="cms-block-container " style="padding: 20px 0px 40px 0px;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col-12" data-cms-element-id="117de5ae737eb89d3e97e866dfe85c57">
-                                                <div class="cms-element-rhweb-brand-slider" style="padding:0;">
-                                                    <h2 class="hero-title">
-                                                        KB SILVERLINE.PRO INOVATIVE LED LEUCHTEN
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="section-group">
+
+                        <div class="section title-h1 section-separator-bottom">
+                            <div class="section-inner container">
+                                <div class="content">
+                                    <h1 class="hero-title">
+                                        KB SILVERLINE.PRO INOVATIVE LED LEUCHTEN
+                                    </h1>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-5 cms-section-default">
-                            <div class="cms-section-default boxed">
-                                <div class="cms-block bg-color  pos-0 cms-block-rhweb-service-area-service-area-four-columns"
-                                    style=" background-color: #fafafa;">
-                                    <div class="cms-block-container " style="padding: 70px 0px 150px;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" data-cms-element-id="">
-                                                <div id="rhweb5a2c741c0ee2f9332ee93c5c2352be06"
-                                                    class="cms-element-rhweb-cta-banner video-inactive usp-active box-center"
-                                                    style="--rhweb-cta-banner-height: auto;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #000000;--rhweb-cta-banner-headline-color: #000000;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: center;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 600px;--rhweb-cta-overlay-height: auto">
-                                                    <div class="overlay">
-                                                        <div class="rhweb-cta-banner-inner">
-                                                            <div class="container-content left">
-                                                                <!-- <i class="fa fa-check"></i> -->
-                                                                <i class="fa fa-lightbulb"></i>
-                                                                <div style="text-align: center;">
-                                                                    <div class="h4">Mehr Licht!</div>
-                                                                    <p>Jederzeit sehr einfach erweiterbar.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="section benefits">
+                            <div class="section-inner container">
+                                <div class="blocks">                                        
+                                    <div class="block-item">                                        
+                                        <div class="overlay">
+                                            <i class="icon-cus fa fa-lightbulb"></i>
+                                            <div class="txt">
+                                                <div class="h4">Mehr Licht!</div>
+                                                <p>Jederzeit sehr einfach erweiterbar.</p>
                                             </div>
-                                            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" data-cms-element-id="">
-                                                <div id="rhweb8c7d23f9db115777afd17ffae39402a9"
-                                                    class="cms-element-rhweb-cta-banner video-inactive usp-active box-center"
-                                                    style="--rhweb-cta-banner-height: auto;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #000000;--rhweb-cta-banner-headline-color: #000000;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: center;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 600px;--rhweb-cta-overlay-height: auto">
-                                                    <div class="overlay">
-                                                        <div class="rhweb-cta-banner-inner">
-                                                            <div class="container-content left">
-                                                                <!-- <i class="fa fa-comments"></i> -->
-                                                                <i class="fab fa-buffer"></i>
-                                                                <div style="text-align: center;">
-                                                                    <div class="h4">Mehr Wohlbefinden!</div>
-                                                                    <p>Präsenzmelder zur punktgenauen Lichtsteuerung.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" data-cms-element-id="">
-                                                <div id="rhwebf1e39b79c37d37eb822ebd2e9f28dbd0"
-                                                    class="cms-element-rhweb-cta-banner video-inactive usp-active box-center"
-                                                    style="--rhweb-cta-banner-height: auto;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #000000;--rhweb-cta-banner-headline-color: #000000;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: center;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 600px;--rhweb-cta-overlay-height: auto">
-                                                    <div class="overlay">
-                                                        <div class="rhweb-cta-banner-inner">
-                                                            <div class="container-content left">
-                                                                <!-- <i class="fa fa-cubes"></i> -->
-                                                                <i class="fab fa-windows"></i>
-                                                                <div style="text-align: center;">
-                                                                    <div class="h4">Mehr Sicherheit!</div>
-                                                                    <p>Homogenes Licht für ermüdungsfreies Arbeiten.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" data-cms-element-id="">
-                                                <div id="rhwebf427b26a9c08efcf0fd9f70f10ae343c"
-                                                    class="cms-element-rhweb-cta-banner video-inactive usp-active box-center"
-                                                    style="--rhweb-cta-banner-height: auto;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #000000;--rhweb-cta-banner-headline-color: #000000;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: center;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 600px;--rhweb-cta-overlay-height: auto">
-                                                    <div class="overlay">
-                                                        <div class="rhweb-cta-banner-inner">
-                                                            <div class="container-content left">
-                                                                <!-- <i class="fa fa-rocket"></i> -->
-                                                                <i class="fas fa-sun"></i>
-                                                                <div style="text-align: center;">
-                                                                    <div class="h4">Mehr Leistungtungsfähigkeit!</div>
-                                                                    <p>Perfekte Farbwiedergabe.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div>                                        
                                     </div>
-                                </div>
+                                    <div class="block-item">                                        
+                                        <div class="overlay">
+                                             <i class="icon-cus fab fa-buffer"></i>
+                                            <div class="txt">
+                                                <div class="h4">Mehr Wohlbefinden!</div>
+                                                <p>Präsenzmelder zur punktgenauen Lichtsteuerung.</p>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="block-item">                                        
+                                        <div class="overlay">
+                                            <i class="icon-cus fab fa-windows"></i>
+                                            <div class="txt">
+                                                <div class="h4">Mehr Sicherheit!</div>
+                                                <p>Homogenes Licht für ermüdungsfreies Arbeiten.</p>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="block-item">                                        
+                                        <div class="overlay">
+                                            <i class="icon-cus fas fa-sun"></i>
+                                            <div class="txt">
+                                                <div class="h4">Mehr Leistungtungsfähigkeit!</div>
+                                                <p>Perfekte Farbwiedergabe.</p>
+                                            </div>
+                                        </div>                                        
+                                    </div>                                        
+                                </div>                                
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-2 cms-section-default">
-                            <div class="cms-section-default boxed">
-                                <div class="cms-block pos-0 cms-block-image-four-column">
-                                     <div class="cms-block-container rhweb-block-offset-top-50 rhweb-block-offset"
-                                        style="padding: 20px 0;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col-md-3"
-                                                data-cms-element-id="779e615e0095d7f8eca69312c28ec869">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-
-                                                    <section class="kacheln">
-                                                        <div class="boxen">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Büro LED Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p>
-                                                                                    <strong>Effiziente und ermüdungsfreie LED Beleuchtung für Büro nach DIN, dimmbar und mit Blendschutz.</strong>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container">
-                                                                        <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link">
-                                                                            <button class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">
-                                                                                Mehr erfahren
-                                                                            </button>
-                                                                        </a>
-                                                                    </div>
+                        <div class="section beleuchtung">
+                            <div class="section-inner container">
+                                <div class="blocks">
+                                    <div class="block-item bg-img">  
+                                        <section class="kacheln">
+                                            <div class="boxen">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Büro LED Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p>
+                                                                        <strong>Effiziente und ermüdungsfreie LED Beleuchtung für Büro nach DIN, dimmbar und mit Blendschutz.</strong>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </section>
+                                                        <div class="box-leistung---link-container">
+                                                            <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link">
+                                                                <button class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">
+                                                                    Mehr erfahren
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3"
-                                                data-cms-element-id="a089a87d092b9c794d4fc0c54cb4e03c">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-                                                    <section class="kacheln">
-                                                        <div class="boxen" style="position">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/36/30/48/kb-led-leuchten-led-flur-und-treppenbeleuchtung.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Lager Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p>
-                                                                                    <strong>Energieeffiziente LED Lagerhallenbeleuchtungmit Anwesenheits-Schaltung.</strong>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container"> <a
-                                                                            href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link"> <button
-                                                                                class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">Mehr
-                                                                                erfahren</button> </a> </div>
+                                        </section> 
+                                    </div>
+                                    <div class="block-item bg-img">
+                                        <section class="kacheln">
+                                            <div class="boxen">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/36/30/48/kb-led-leuchten-led-flur-und-treppenbeleuchtung.jpg);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Lager Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p>
+                                                                        <strong>Energieeffiziente LED Lagerhallenbeleuchtungmit Anwesenheits-Schaltung.</strong>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </section>
+                                                        <div class="box-leistung---link-container"> <a
+                                                                href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link"> <button
+                                                                    class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">Mehr
+                                                                    erfahren</button> </a> </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3"
-                                                data-cms-element-id="a46a338b4e89c903a8a4b5274a472789">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-                                                    <section class="kacheln">
-                                                        <div class="boxen" style="position">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/03/7c/fc/kb-led-leuchten-led-hallen-lager-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Verkaufsraum Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p><strong>Energieeffiziente LED
-                                                                                        Verkaufsraumbeleuchtung mit
-                                                                                        perfekter
-                                                                                        Warenpräsentation</strong></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container"> <a
-                                                                            href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link"> <button
-                                                                                class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">Mehr
-                                                                                erfahren</button> </a> </div>
+                                        </section>
+                                    </div>
+                                    <div class="block-item bg-img">                                        
+                                        <section class="kacheln">
+                                            <div class="boxen" style="position">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/03/7c/fc/kb-led-leuchten-led-hallen-lager-led-beleuchtung.jpg);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Verkaufsraum Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p><strong>Energieeffiziente LED
+                                                                            Verkaufsraumbeleuchtung mit
+                                                                            perfekter
+                                                                            Warenpräsentation</strong></p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </section>
-
+                                                        <div class="box-leistung---link-container"> <a
+                                                                href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link"> <button
+                                                                    class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">Mehr
+                                                                    erfahren</button> </a> </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </section>                                        
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-25 cms-section-default" style="padding: 50px 0 0;">
-                            <div class="cms-section-default boxed">
-                                <div class="" style="padding:50px 1.25rem;position:relative;"> 
-                                    <div class="emotion--html"> 
-                                        <div class="html--title" style="padding: 20px 0px 10px 0px;
-                                        border-bottom: 1px solid #000;
-                                        text-decoration: none !important;
-                                        margin: 0px 20px 0px 20px;
-                                        margin: 0rem 1.25rem 0rem 1.25rem;
-                                        display: block;
-                                        font-weight: 700;
-                                        color: #000; 
-                                        text-align:center;
-                                            background-clip: text;
-                                            color: #ffffff;
-                                            text-shadow: 1px 1px 2px rgb(0 0 0),-1px -1px 2px rgb(0 0 0),1px -1px 2px rgb(0 0 0),-1px 1px 2px rgb(0 0 0);
-                                            font-size: 18px;
-                                            letter-spacing: 1px;">                                             
-                                                Das intelligente LED-Lichtsystem für alle Arbeits - und Verkehrsbereiche Ihres Unternehmen
-                                             
+                        <div class="section desc">
+                            <div class="section-inner container">
+                                <div class="blocks"> 
+                                    <div class="block-item"> 
+                                        <div class="desc--title">                                             
+                                            Das intelligente LED-Lichtsystem für alle Arbeits - und Verkehrsbereiche Ihres Unternehmen
                                         </div> 
-                                        <div class="html--content"> 
-                                            <p style="text-align: center;margin-top: 10px;">
-                                                <span style="font-size: medium;" data-mce-mark="1">
-                                                    Mit unserem neuen <strong>KB SILVERLINE.PRO LED LEUCHTEN</strong> decken wir alle Beleuchtungsanforderungen Ihres Unternehmens ab: Von der Verwaltung bis zu Produktion und Lager bringt unser System die erforderliche Lichtstärke und Farbtemperatur in Verkehrsbereiche und auf Arbeitsplätze. </span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Elegant im Design, durchdacht konstruiert, variabel, einfach in der Montage und&nbsp;<strong>„Made in Germany“</strong>.</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Verschiedene Längen kombinierbar einfach erweiterbar, auch nachträglich!</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">
-                                                        <strong>Schön, schlank und anwenderfreundlich: KB SILVERLINE.PRO LED LEUCHTEN - die helle Freude!</strong>
-                                                </span>
+                                        <div class="desc--content"> 
+                                            <p>                                                
+                                                Mit unserem neuen <strong>KB SILVERLINE.PRO LED LEUCHTEN</strong> decken wir alle Beleuchtungsanforderungen Ihres Unternehmens ab: Von der Verwaltung bis zu Produktion und Lager bringt unser System die erforderliche Lichtstärke und Farbtemperatur in Verkehrsbereiche und auf Arbeitsplätze. </span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Elegant im Design, durchdacht konstruiert, variabel, einfach in der Montage und&nbsp;<strong>„Made in Germany“</strong>.</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">Verschiedene Längen kombinierbar einfach erweiterbar, auch nachträglich!</span></p> <p style="text-align: center;"><span style="font-size: medium;" data-mce-mark="1">
+                                                <strong>Schön, schlank und anwenderfreundlich: KB SILVERLINE.PRO LED LEUCHTEN - die helle Freude!</strong>
                                             </p> 
                                         </div> 
                                     </div> 
@@ -1420,419 +1426,244 @@
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-3 cms-section-default" style="padding: 50px 0;">
-                            <div class="cms-section-default boxed">
-                                <section class="kacheln"> <div class="boxen" style=""> 
-                                    <div class="box box-leistung"> 
-                                        <div class="box-inner"> 
-                                            <div class="box-leistung--img" style="height: 500px;"> 
-                                                <div class="box-leistung-img-hover" style="background-image: url(https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg);"></div> 
-                                            </div> 
-                                            <div class="box-leistung--content" style="bottom: 60%;"> 
-                                                <div class="box-leistung--inner-blur" style="background-image: url(https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg);"></div> 
-                                                <div class="box-leistung--inner "> 
-                                                    <h3 style="font-size: 2rem; line-height: calc(2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;;">LIGHTING PROFESSIONAL SOLUTIONS</h3> 
-                                                    <div class="alm--blur-box--content-main"> 
-                                                        <p>
-                                                            <strong><span style="font-size: large;">
-                                                            Wir entwerfen und entwickeln&nbsp;LED-Lichtsystem nach Ihren Bedürfnissen.</span></strong>
-                                                        </p> 
+                        <div class="section play-video">
+                            <div class="section-inner container">
+                                <section class="kacheln"> 
+                                    <div class="boxen"> 
+                                        <div class="box box-leistung"> 
+                                            <div class="box-inner"> 
+                                                <div class="box-leistung--img" style="height: 500px;"> 
+                                                    <div class="box-leistung-img-hover" style="background-image: url(https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg);"></div> 
+                                                </div> 
+                                                <div class="box-leistung--content" style="bottom: 60%;"> 
+                                                    <div class="box-leistung--inner-blur" style="background-image: url(https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg);"></div> 
+                                                    <div class="box-leistung--inner "> 
+                                                        <h3 style="font-size: 2rem; line-height: calc(2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;;">LIGHTING PROFESSIONAL SOLUTIONS</h3> 
+                                                        <div class="alm--blur-box--content-main"> 
+                                                            <p>
+                                                                <strong><span style="font-size: large;">
+                                                                Wir entwerfen und entwickeln&nbsp;LED-Lichtsystem nach Ihren Bedürfnissen.</span></strong>
+                                                            </p> 
+                                                        </div> 
                                                     </div> 
                                                 </div> 
-                                            </div> 
-                                            <div class="box-leistung---link-container" style="top: 56%;"> 
-                                                <a href="/lighting-professional-solutions/" class="box-leistung--link"> 
-                                                    <button class="btn btn-leistung" 
-                                                        style="background: #fed700; color: #000;">
-                                                        LIGHTING PROFESSIONAL SOLUTION
-                                                    </button> 
-                                                </a> 
+                                                <div class="box-leistung---link-container" style="top: 56%;"> 
+                                                    <a href="/lighting-professional-solutions/" class="box-leistung--link"> 
+                                                        <button class="btn btn-leistung" 
+                                                            style="background: #fed700; color: #000;">
+                                                            LIGHTING PROFESSIONAL SOLUTION
+                                                        </button> 
+                                                    </a> 
+                                                </div> 
                                             </div> 
                                         </div> 
                                     </div> 
-                                </div> 
                                 </section>
                             </div>
                         </div>
 
-                        <div class="cms-section  pos-38 cms-section-default">
-                            <div class="cms-section-default boxed" style="position: relative;display:flex;justify-content: space-between;padding: 100px 0px 50px;">
-                                
-                                <div class="info-place"> 
-                                    <div style="width:90%;margin: auto;"> 
-                                        <div style="text-align: center; position: relative;"> 
-                                            <div class="leyba"> 
-                                                <i class="fas fa-medal" style="color: #000;font-size: 32px;"></i> 
+                        <div class="section erfolge">
+                            <div class="section-inner container">
+                                <div class="blocks">
+                                    <div class="info-place"> 
+                                        <div style="width:90%;margin: auto;"> 
+                                            <div style="text-align: center; position: relative;"> 
+                                                <div class="leyba"> 
+                                                    <i class="fas fa-medal" style="color: #000;font-size: 32px;"></i> 
+                                                </div> 
                                             </div> 
+                                            
+                                            <div class="infoled"> 
+                                                <h3>Höchste Qualität</h3> 
+                                                <hr>
+                                                <p class="infoled-p"> Gesundes Licht ist eine Frage der Zutaten<br> Zutaten für die <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind sowohl die herausragende Qualität der verwendeten LED als auch ein jahrzehntelanges Know-how in Elektronik und Steuerungstechnik. Damit schaffen unsere <strong>LED-Leuchtensysteme</strong> homogenes, flimmerfreies Arbeitslicht über die gesamte Lebensdauer der Leuchtmittel. </p>
+                                                <div style="width: 100%;margin: auto;"> 
+                                                    <button class="infoled-btn"> 
+                                                        <a href="/lighting-professional-solutions/" style="color: #253237;">Lighting Solutions</a> 
+                                                    </button> 
+                                                </div> 
+                                            </div>
                                         </div> 
-                                        
-                                        <div class="infoled"> 
-                                            <h3>Höchste Qualität</h3> 
-                                            <hr>
-                                            <p class="infoled-p"> Gesundes Licht ist eine Frage der Zutaten<br> Zutaten für die <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind sowohl die herausragende Qualität der verwendeten LED als auch ein jahrzehntelanges Know-how in Elektronik und Steuerungstechnik. Damit schaffen unsere <strong>LED-Leuchtensysteme</strong> homogenes, flimmerfreies Arbeitslicht über die gesamte Lebensdauer der Leuchtmittel. </p>
-                                            <div style="width: 100%;margin: auto;"> 
-                                                <button class="infoled-btn"> 
-                                                    <a href="/lighting-professional-solutions/" style="color: #253237;">Lighting Solutions</a> 
-                                                </button> 
+                                    </div>
+                                    
+                                    <div class="info-place"> 
+                                        <div style="width:90%;margin: auto;"> 
+                                            <div style="text-align: center; position: relative;"> 
+                                                <div class="leyba"> 
+                                                    <i class="fas fa-clipboard-list" style="color: #000;font-size: 32px;"></i> 
+                                                </div> 
                                             </div> 
-                                        </div>
-                                    </div> 
-                                </div>
-                                
-                                <div class="info-place"> 
-                                    <div style="width:90%;margin: auto;"> 
-                                        <div style="text-align: center; position: relative;"> 
-                                            <div class="leyba"> 
-                                                <i class="fas fa-clipboard-list" style="color: #000;font-size: 32px;"></i> 
-                                            </div> 
+                                            
+                                            <div class="infoled"> 
+                                                <h3> Persönliche Beratung</h3> 
+                                                <hr>
+                                                <p class="infoled-p"> 
+                                                    Zögern Sie nicht - jetzt Kontakt aufnehmen und kostenlos beraten lassen! 
+                                                    Rufen Sie uns jetzt an:
+                                                    <strong>
+                                                        <a href="tel:+496343934720">+49 6343 93472-0</a>
+                                                    </strong>
+                                                    <br> oder schreiben Sie eine E-Mail an:
+                                                    <br> 
+                                                    <strong>
+                                                        <a href="mailto:info@kb-led-leuchten.de">info@kb-led-leuchten.de</a>
+                                                    </strong> 
+                                                    <br>und vereinbaren Sie mit Unseren LED BELEUCHTUNG PROFIS einen Termin. Wir sind gespannt auf Ihr Projekt!
+                                                    <!-- Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten.  -->
+                                                </p>                                            
+                                                <div style="width: 100%;margin: auto;"> 
+                                                    <button class="infoled-btn"> 
+                                                        <a href="/referenzen/" style="color: #253237;">Referenzen</a> 
+                                                    </button> 
+                                                </div> 
+                                            </div>
                                         </div> 
-                                        
-                                        <div class="infoled"> 
-                                            <h3> Persönliche Beratung</h3> 
-                                            <hr>
-                                            <p class="infoled-p"> 
-                                                Zögern Sie nicht - jetzt Kontakt aufnehmen und kostenlos beraten lassen! 
-                                                Rufen Sie uns jetzt an:
-                                                <strong>
-                                                    <a href="tel:+496343934720">+49 6343 93472-0</a>
-                                                </strong>
-                                                <br> oder schreiben Sie eine E-Mail an:
-                                                <br> 
-                                                <strong>
-                                                    <a href="mailto:info@kb-led-leuchten.de">info@kb-led-leuchten.de</a>
-                                                </strong> 
-                                                <br>und vereinbaren Sie mit Unseren LED BELEUCHTUNG PROFIS einen Termin. Wir sind gespannt auf Ihr Projekt!
-                                                <!-- Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten.  -->
-                                            </p>                                            
-                                            <div style="width: 100%;margin: auto;"> 
-                                                <button class="infoled-btn"> 
-                                                    <a href="/referenzen/" style="color: #253237;">Referenzen</a> 
-                                                </button> 
-                                            </div> 
-                                        </div>
-                                    </div> 
-                                </div>
+                                    </div>
 
-                                <div class="info-place"> 
-                                    <div style="width:90%;margin: auto;"> 
-                                        <div style="text-align: center; position: relative;"> 
-                                            <div class="leyba"> 
-                                                <i class="fas fa-leaf" style="color: #000;font-size: 32px;"></i> 
-                                            </div> 
-                                        </div>                                          
-                                        <div class="infoled"> 
-                                            <h3>Nachhaltig</h3> 
-                                            <hr>
-                                            <p class="infoled-p"> Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten. </p>
-                                            <div style="width: 100%;margin: auto;"> 
-                                                <button class="infoled-btn"> 
-                                                    <a href="/led-leuchten/" style="color: #253237;">LED Leuchten</a> 
-                                                </button> 
-                                            </div> 
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cms-section  pos-2 cms-section-default">
-                            <div class="cms-section-default boxed">
-                                <div class="cms-block pos-0 cms-block-image-four-column">
-
-                                    <div class="cms-block-container rhweb-block-offset-top-50 rhweb-block-offset"
-                                        style="padding: 50px 0px 100px 0px;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col-md-3"
-                                                data-cms-element-id="779e615e0095d7f8eca69312c28ec869">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-
-                                                    <section class="kacheln">
-                                                        <div class="boxen">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/5c/d5/07/kb-led-leutchen-buero-led-beleuchtung-buero-led-lampen-1.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Meetingraum Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p>
-                                                                                    <strong>Elegante und energieeffiziente Meeting- und Konferezraumbeleuchtung</strong>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container">
-                                                                        <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link">
-                                                                            <button class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">
-                                                                                Mehr erfahren
-                                                                            </button>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
+                                    <div class="info-place"> 
+                                        <div style="width:90%;margin: auto;"> 
+                                            <div style="text-align: center; position: relative;"> 
+                                                <div class="leyba"> 
+                                                    <i class="fas fa-leaf" style="color: #000;font-size: 32px;"></i> 
+                                                </div> 
+                                            </div>                                          
+                                            <div class="infoled"> 
+                                                <h3>Nachhaltig</h3> 
+                                                <hr>
+                                                <p class="infoled-p"> Unsere <strong>KB SILVERLINE.PRO LED Leuchten</strong> sind nicht nur energieeffizient, sie sind auch nachhaltig in Produktion, Lichtmanagement und Wartung. Unsere <strong>LED Leuchtmittel</strong> sind nach ihrer langen Lebensdauer einfach mit ein paar Handgriffen austauschbar, sowohl Leuchte wie auch Installation bleiben <strong>resourcenschonend</strong> erhalten. </p>
+                                                <div style="width: 100%;margin: auto;"> 
+                                                    <button class="infoled-btn"> 
+                                                        <a href="/led-leuchten/" style="color: #253237;">LED Leuchten</a> 
+                                                    </button> 
+                                                </div> 
                                             </div>
-                                            <div class="col-md-3"
-                                                data-cms-element-id="a089a87d092b9c794d4fc0c54cb4e03c">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-                                                    <section class="kacheln">
-                                                        <div class="boxen" style="position">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/69/b3/de/kb-led-leuchten-led-industriebeleuchtung-led-hallenbeleuchtung.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Industrie LED Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p>
-                                                                                    <strong>Energieeffiziente Produktionshallenbeleuchtung für ermüdungsfreies, sicheres Arbeiten.</strong>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container"> <a
-                                                                            href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link"> <button
-                                                                                class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">Mehr
-                                                                                erfahren</button> </a> </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3"
-                                                data-cms-element-id="a46a338b4e89c903a8a4b5274a472789">
-                                                <div class="cms-element-image justify-content-start">
-                                                    <style type="text/css">
-                                                        button.btn.btn-leistung:hover {
-                                                            background: #5f7285 !important;
-                                                        }
-                                                    </style>
-                                                    <section class="kacheln">
-                                                        <div class="boxen" style="position">
-                                                            <div class="box box-leistung">
-                                                                <div class="box-inner">
-                                                                    <div class="box-leistung--img">
-                                                                        <div class="box-leistung-img-hover"
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/20/22/9b/kb-led-leuchten-led-arbeitsplatzbeleuchtung.jpg);">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung--content">
-                                                                        <div class="box-leistung--inner-blur "
-                                                                            style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
-                                                                        </div>
-                                                                        <div class="box-leistung--inner ">
-                                                                            <h3
-                                                                                style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
-                                                                                Arbeitsplatz LED Beleuchtung</h3>
-                                                                            <div class="alm--blur-box--content-main">
-                                                                                <p>
-                                                                                    <strong>Industrie-Arbeitsplatzbeleuchtung nach DIN, dimmbar und mit Blendschutz.</strong>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box-leistung---link-container"> <a
-                                                                            href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                                            class="box-leistung--link"> <button
-                                                                                class="btn btn-leistung"
-                                                                                style="background: #fed700; color: #000000;">Mehr
-                                                                                erfahren</button> </a> </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- <div class="cms-section  pos-35 cms-section-default .motion--container"
-                            style="height: 450px;position: relative;overflow: hidden;margin-bottom: 80px;margin-top: -35px;">
-                            <style type="text/css">
-                                .emotion--container .emotion--element>div {
-                                    background: #fff;
-                                }
 
-                                .emotion--video {
-                                    width: 100%;
-                                    height: 480px;
-                                    overflow: hidden;
-                                    position: relative;
-                                }
-
-                                .emotion--video .video--element {
-                                    width: 100%;
-                                    height: 100%;
-                                    background: #000;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    z-index: 1000;
-                                }
-
-                                .emotion--video .video--cover {
-                                    display: block;
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    z-index: 1300;
-                                    background-position: center center;
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
-                                    background-color: #000;
-                                    text-align: center;
-                                }
-
-                                .emotion--video .video--text {
-                                    width: 100%;
-                                    height: 100%;
-                                    margin: auto;
-                                    position: absolute;
-                                    left: 0;
-                                    right: 0;
-                                    top: 0;
-                                    bottom: 0;
-                                    z-index: 1100;
-                                    color: #fff;
-                                    text-align: center;
-                                }
-
-                                .emotion--video .video--cover .video--play-icon {
-                                    width: 6.25rem;
-                                    height: 6.25rem;
-                                    font-size: 6.25rem;
-                                    display: block;
-                                    position: absolute;
-                                    top: 0;
-                                    bottom: 0;
-                                    right: 0;
-                                    left: 0;
-                                    margin: auto;
-                                    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-                                    color: #fff;
-                                }
-
-                                .icon--play:before {
-                                    content: "\e6b7";
-                                }
-
-                                @media screen and (min-width: 64em) {
-                                    .emotion--container.emotion--column-12 .col-l-12 {
-                                        width: 100%;
-                                    }
-                                }
-
-                                @media screen and (min-width: 64em) {
-                                    .emotion--container.emotion--column-12 .start-col-l-1 {
-                                        left: 0%;
-                                    }
-                                }
-                            </style>
-                            <div class="cms-section-default boxed" style="
-                                        /* background-image: url('https://www.kb-led-leuchten.de/media/image/7d/91/0c/kb-led-leuchten-video.jpg'); */
-                                        background-repeat: no-repeat;
-                                        width: 100%;             
-                                        max-width: 100%;                           
-                                        background-size: contain;
-                                        /* position: fixed; */
-                                        top: 0;
-                                        left: 0;z-index:1;">
-
-                                <image>
-
-                                </image>
-                                <div class="cms-block  pos-0 cms-block-rhweb-cta-banner-category-two-columns" style="">
-                                    <div class="cms-block-container " style="padding: 20px 20px 20px 20px;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col" style="height: 480px;">
-                                                <div
-                                                    class="emotion--element col-1 row-1 start-col-1 start-row-1 col-xs-12 start-col-xs-1 row-xs-4 start-row-xs-43 col-s-12 start-col-s-1 row-s-4 start-row-s-47 col-m-12 start-col-m-1 row-m-4 start-row-m-42 col-l-12 start-col-l-1 row-l-4 start-row-l-28 col-xl-12 start-col-xl-1 row-xl-5 start-row-xl-20">
-                                                    <div class="emotion--video" data-mode="scale" data-scaleoriginx="50"
-                                                        data-scaleoriginy="50" data-scale="1">
-                                                        <video class="video--element" poster="" preload="" controls=""
-                                                            style="transform-origin: 50% 50%;">
-                                                            <source
-                                                                src="https://www.kb-led-leuchten.de/media/video/55/d6/2b/kb-led-leuchten-led-leuchten-1.mp4"
-                                                                type="video/webm">
-                                                            <source
-                                                                src="https://www.kb-led-leuchten.de/media/video/55/d6/2b/kb-led-leuchten-led-leuchten-1.mp4"
-                                                                type="video/mp4">
-                                                            <source
-                                                                src="https://www.kb-led-leuchten.de/media/video/55/d6/2b/kb-led-leuchten-led-leuchten-1.mp4"
-                                                                type="video/ogg">
-                                                        </video>
-                                                        <a href="#play-video" class="video--cover"
-                                                            style="background-image: url('https://www.kb-led-leuchten.de/media/image/7d/91/0c/kb-led-leuchten-video.jpg');">
-                                                            <div style="
-                                                            left: 45%;
-                                                            position: absolute;
-                                                            top: 50%;
-                                                            transform: translate(-50%, 50%);
-                                                            rotate: 134deg;
-                                                            width: 0;
-                                                            height: 0;
-                                                            border: 2.5em solid;
-                                                            border-color: #fed700 transparent transparent #fed700;
-                                                            border-radius: 0px;z-index:99999;">
+                        <div class="section beleuchtung-2">
+                            <div class="section-inner container">
+                                <div class="blocks">
+                                    <div class="block-item bg-img">  
+                                        <section class="kacheln">
+                                            <div class="boxen">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/5c/d5/07/kb-led-leutchen-buero-led-beleuchtung-buero-led-lampen-1.jpg);">
                                                             </div>
-                                                        </a> 
-                                                        <div class="video--text no--events"
-                                                            style="background: rgba(0, 0, 0, .3)">
-                                                            <h4 style="text-align: center;">KB SILVERLINE.PRO ein elegantes
-                                                                Lichtsystem für alle Arbeits- und Verkehrsbereiche</h4>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Meetingraum Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p>
+                                                                        <strong>Elegante und energieeffiziente Meeting- und Konferezraumbeleuchtung</strong>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung---link-container">
+                                                            <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link">
+                                                                <button class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">
+                                                                    Mehr erfahren
+                                                                </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </section>
+                                    </div>
+                                    <div class="block-item bg-img">
+                                        <section class="kacheln">
+                                            <div class="boxen" style="position">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/69/b3/de/kb-led-leuchten-led-industriebeleuchtung-led-hallenbeleuchtung.jpg);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Industrie LED Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p>
+                                                                        <strong>Energieeffiziente Produktionshallenbeleuchtung für ermüdungsfreies, sicheres Arbeiten.</strong>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung---link-container"> <a
+                                                                href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link"> <button
+                                                                    class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">Mehr
+                                                                    erfahren</button> </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="block-item bg-img">                                        
+                                        <section class="kacheln">
+                                            <div class="boxen" style="position">
+                                                <div class="box box-leistung">
+                                                    <div class="box-inner">
+                                                        <div class="box-leistung--img">
+                                                            <div class="box-leistung-img-hover"
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/20/22/9b/kb-led-leuchten-led-arbeitsplatzbeleuchtung.jpg);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung--content">
+                                                            <div class="box-leistung--inner-blur "
+                                                                style="background-image: url(https://www.kb-led-leuchten.de/media/image/66/24/48/kb-led-leuchten-led-verkaufsraum-led-beleuchtung.jpg);">
+                                                            </div>
+                                                            <div class="box-leistung--inner ">
+                                                                <h3
+                                                                    style="font-size: 1.1rem; line-height: calc(1.2rem + 10px); color: #ffffff; background: #3a3e44; padding: 5px; border: 1px solid #ffffff;; text-transform: none;">
+                                                                    Arbeitsplatz LED Beleuchtung</h3>
+                                                                <div class="alm--blur-box--content-main">
+                                                                    <p>
+                                                                        <strong>Industrie-Arbeitsplatzbeleuchtung nach DIN, dimmbar und mit Blendschutz.</strong>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-leistung---link-container"> <a
+                                                                href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                                class="box-leistung--link"> <button
+                                                                    class="btn btn-leistung"
+                                                                    style="background: #fed700; color: #000000;">Mehr
+                                                                    erfahren</button> </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>                                        
                                     </div>
                                 </div>
+                                
                             </div>
-                        </div> -->
-                        
-                        <div class="cms-section  pos-4 cms-section-default" style="padding-bottom:100px;">
-                            <div class="cms-section-default boxed">
+                        </div>
+
+                        <div class="section about">
+                            <div class="section-inner container">
                                 <div class="column--content"> 
                                     <h1 style="text-align: center;">Herzlich willkommen im K + B LED Leuchtenshop</h1> 
                                     <h2 style="text-align: center;">
@@ -1879,81 +1710,12 @@
                                                 </a></span></span>
                                     </p> 
                                 </div>
-                                <!-- <div class="cms-block  pos-0 cms-block-rhweb-cta-banner-category-two-columns" style="">
-                                    <div class="cms-block-container " style="padding: 50px 20px 50px 20px;">
-                                        <div class="cms-block-container-row row cms-row ">
-                                            <div class="col">
-                                                <div class="cms-block-rhweb-columns rhweb-columns-c-1-1">
-                                                    <div class=" mb-3 mb-md-0" data-cms-element-id="">
-                                                        <div id="rhwebe958da4629e5e725d014afacab0e92de"
-                                                            class="cms-element-rhweb-cta-banner video-inactive box-center"
-                                                            style="--rhweb-cta-banner-height: 350px;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #000000;--rhweb-cta-banner-headline-color: #000000;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: flex-start;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 60%;--rhweb-cta-overlay-height: auto;--headline-size-sm:;--headline-size-md:;--headline-size-lg:;--headline-size-xl:35px;--font-size-sm:;--font-size-md:;--font-size-lg:;--font-size-xl:16px;--rhweb-cta-background-image: url(https://tronic.shopware-theme.de/media/9b/88/54/1704895062/tronic_cta_banner_cms.jpg?1704895062);">
-
-                                                            <div class="overlay">
-                                                                <div class="rhweb-cta-banner-inner">
-                                                                    <div class="container-content">
-
-
-                                                                        <h3 class="rhweb-heading-cta"
-                                                                            style="color: #000000">
-                                                                            Erweiterte Erlebniswelt
-                                                                        </h3>
-                                                                        <p class="container-content-text">
-                                                                            Mit dem CMS Bundle - Addon erhältst du
-                                                                            unzählige
-                                                                            Möglichkeiten, einzigartige Landing Pages zu
-                                                                            erstellen.
-                                                                        </p>
-                                                                        <a class="btn btn-secondary btn-lg rhweb-button"
-                                                                            href="Erlebniswelten-CMS/">
-                                                                            Jetzt ansehen!
-
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" data-cms-element-id="">
-                                                        <div id="rhweb89889fba3dd8803c9702f996665c9a6d"
-                                                            class="cms-element-rhweb-cta-banner video-inactive box-center"
-                                                            style="--rhweb-cta-banner-height: 350px;--rhweb-cta-banner-height-mobile: auto;--rhweb-cta-banner-text-align: left;--rhweb-cta-banner-color: #ffffff;--rhweb-cta-banner-headline-color: #ffffff;--rhweb-cta-banner-vertical-align: center;--rhweb-cta-banner-horizontal-align: flex-start;--rhweb-cta-overlay-background: none;--rhweb-cta-overlay-max-width: 60%;--rhweb-cta-overlay-height: auto;--headline-size-sm:;--headline-size-md:;--headline-size-lg:;--headline-size-xl:35px;--font-size-sm:;--font-size-md:;--font-size-lg:;--font-size-xl:16px;--rhweb-cta-background-image: url(https://tronic.shopware-theme.de/media/4d/0f/8c/1704895062/tronic_cta_banner_features.jpg?1704895062);background-image: url(https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg);">
-
-                                                            <div class="overlay">
-                                                                <div class="rhweb-cta-banner-inner">
-                                                                    <div class="container-content">
-
-
-                                                                        <h3 class="rhweb-heading-cta"
-                                                                            style="color: #ffffff">
-                                                                            Theme Features - Addon
-                                                                        </h3>
-                                                                        <p class="container-content-text">
-                                                                            Gib deinem Shop den letzten Schliff! Mit dem
-                                                                            Theme Features - Addon kannst du weitere
-                                                                            tolle
-                                                                            Funktionen hinzufügen.
-                                                                        </p>
-                                                                        <a class="btn btn-outline-light btn-lg rhweb-button"
-                                                                            href="Theme-Features/"
-                                                                            style="left: 50%;position: relative;transform: translate(-23%, -32%);">
-                                                                            LIGHTING PROFESSIONAL SOLUTION
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
+
                     </div>
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
         </div>
     </main>
     <div class="newsletter rhweb-footer-newsletter-container footer-above">
