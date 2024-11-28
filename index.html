@@ -57,24 +57,6 @@
         .section.play-video .kacheln .boxen .box .box-inner {
             background-color: transparent;
         }
-        /* .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content {
-            margin: 0 12.5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-direction: column;
-            position: absolute;
-            bottom: 50%;
-            height: auto;
-            border: 1px solid transparent;
-            width: 75%;
-            overflow: hidden;
-            z-index: 2;
-            padding-bottom: 0px;
-            transform: translate(0, 50%);
-            transition: all .55s;
-        } */
         .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content .box-leistung--inner h3 {
             font-size: 24px; 
             line-height: 2; 
@@ -116,6 +98,37 @@
         }
         .section.play-video .kacheln .boxen .box .box-inner:hover .box-leistung--content .box-leistung--inner .alm--blur-box--content-main {
             padding: 15px 0 20px;
+        }
+        .section.play-video .kacheln .boxen .box {
+            width: 100%;
+            height: 100%;
+            display: block;
+            align-self: stretch;
+            visibility: visible;
+            opacity: 1;
+            overflow: hidden;
+            transition: visibility 0s, opacity .5s linear, width .5s linear, height .5s linear;
+            /* box-shadow: 0px 26px 20px #6c6c6c; */
+            box-shadow: 0px 0px 400px #fed700, 0px 26px 26px #3a3a3a;
+        }
+        .section.play-video .kacheln .boxen .box .box-inner .box-leistung--content {
+            margin: 0 12.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            position: absolute;
+            bottom: 57%;
+            height: auto;
+            background: transparent;
+            border: 1px solid transparent;
+            width: 75%;
+            overflow: hidden;
+            z-index: 2;
+            padding-bottom: 0px;
+            transform: translate(0, 50%);
+            transition: all .55s;
         }
 
 
@@ -193,6 +206,8 @@
             z-index: 1;
             position: relative;
         }
+
+
         .section .container .blocks {
             display: flex;
             width: 100%;
@@ -209,7 +224,7 @@
             transition: all .3s ease-in-out;
         }
         .blocks .block-item:hover {
-            /* box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a; */
+            box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
             transition: all .3s ease-in-out;
         }
         .blocks .block-item.bg-img {
@@ -238,7 +253,6 @@
             font-size: 15em !important;
             opacity: .06 !important;
         }
-
         .block-item .overlay .h4 {
             font-weight: 700;
             line-height: 24px;
@@ -248,6 +262,12 @@
             color: #161e22;
             height: 60px;
         }
+        button.btn.btn-leistung:hover {
+            background: #fed700 !important;
+            box-shadow: inset 0 0 15px #3a3a3a;
+            text-decoration: none;
+        }
+
 
         .newsletter {
             z-index: 9999;
@@ -1506,7 +1526,7 @@
 
                 <div class="section play-video">
                     <div class="section-inner container">
-                        <div class=" f-video-container">
+                        <div class="f-video-container">
                             <div class="f-video-player"></div>
                             <div id="1" class="f-video-cover" data-video="sR0s-ou5GyM">
                                 <section class="kacheln"> 
