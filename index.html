@@ -16,7 +16,7 @@
         * {
             box-sizing: border-box;
         }
-
+        
         
         .section.play-video .f-video-container {
             position: relative;
@@ -28,8 +28,9 @@
             position: relative;
             overflow: hidden;
             height: 0;
-            /* padding-bottom: 56.25%; */
             padding-bottom: 37.25%;
+            height: 100%;
+            background-color: #000;
         }
             
         .section.play-video  .f-video-player iframe,
@@ -42,12 +43,14 @@
             width: 100%;
         }
             
-        .section.play-video  .f-video-cover {
+        .section.play-video .f-video-cover {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
-            background-image: url("https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg");
+            /* background-image: url("https://www.kb-led-leuchten.de/media/image/95/de/99/led-leuchten-shop-lighting-professional-solution.jpg"); */
+            /* background-image: url("/video/kb-led-leuchten-1.mp4"); */
+            background-image: url("./images/led-leuchten-shop-lighting-professional-solution.jpg");
             background-size: cover;
             background-position: 100% 100%;
             width: 100%;
@@ -211,22 +214,24 @@
         .section .container .blocks {
             display: flex;
             width: 100%;
-            align-items: baseline;
+            align-items: center;
             justify-content: space-between;
         }
         .blocks .block-item{
             position: relative;
             height: 250px;
+            min-height: 250px;
             width: 340px;
             padding: 0;
             text-align: center;
             box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
-            transition: all .3s ease-in-out;
+            transition: all .2s ease-in-out;
         }
         .blocks .block-item:hover {
             box-shadow: 0px 0px 400px #fed700, 0px 16px 20px #3a3a3a;
-            transition: all .3s ease-in-out;
+            transition: all .2s ease-in-out;
         }
+        
         .blocks .block-item.bg-img {
             width: 80%;
             margin: 10px;
@@ -238,8 +243,6 @@
             width: 100%;
             justify-content: center;
             align-items: center;
-            /* background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(0, 0, 0, .08) 48%, rgba(0, 0, 0, .8) 52%, transparent 52%);
-            background-size: 6px 6px; */
         }
         .block-item .overlay .txt p {
             height: 40px;
@@ -252,6 +255,13 @@
             transform: translate(-50%, -50%);
             font-size: 15em !important;
             opacity: .06 !important;
+            transition: all .8s ease-in-out;
+        }
+        .blocks .block-item:hover i {
+            font-size: 4em !important;
+            opacity: .6 !important;
+            top: 80px;
+            transition: all .3s ease-in-out;
         }
         .block-item .overlay .h4 {
             font-weight: 700;
@@ -261,11 +271,29 @@
             margin-top: 23px;
             color: #161e22;
             height: 60px;
+            transition: all .3s ease-in-out;
         }
-        button.btn.btn-leistung:hover {
+        .blocks .block-item:hover .h4 {
+            line-height: 24px;
+            font-size: 1.26rem;
+            margin-bottom: -5px;
+            margin-top: 96px;
+            transition: all .3s ease-in-out;
+        }
+        .section.beleuchtung .box-leistung--link:hover {
+            text-decoration: none ;
+        }
+
+        .section.beleuchtung button.btn.btn-leistung {
+            background: #fed700 !important; 
+            color: #000000;
+            transition: all .3s ease-in-out;
+        }
+        .section.beleuchtung button.btn.btn-leistung:hover {
             background: #fed700 !important;
             box-shadow: inset 0 0 15px #3a3a3a;
             text-decoration: none;
+            transition: all .3s ease-in-out;
         }
 
 
@@ -321,7 +349,7 @@
             height: 17.2414%; 
             top: 10.3448%;
             box-shadow: 0px 0px 400px #fed700, 0px 26px 20px #3a3a3a;
-            transition: all .3s ease-in-out;
+            transition: all .2s ease-in-out;
         }
         .leyba {
             position: relative;
@@ -1415,10 +1443,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="box-leistung---link-container">
-                                                    <a href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
+                                                    <a href="/"
                                                         class="box-leistung--link">
-                                                        <button class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">
+                                                        <button class="btn btn-leistung">
                                                             Mehr erfahren
                                                         </button>
                                                     </a>
@@ -1453,12 +1480,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="box-leistung---link-container"> <a
-                                                        href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                        class="box-leistung--link"> <button
-                                                            class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">Mehr
-                                                            erfahren</button> </a> </div>
+                                                <div class="box-leistung---link-container"> 
+                                                    <a href="/" class="box-leistung--link"> 
+                                                        <button
+                                                            class="btn btn-leistung">Mehr
+                                                            erfahren</button> 
+                                                    </a> 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1490,12 +1518,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="box-leistung---link-container"> <a
-                                                        href="/buero-gewerbe-beleuchtung/verkaufsraumbeleuchtung/"
-                                                        class="box-leistung--link"> <button
-                                                            class="btn btn-leistung"
-                                                            style="background: #fed700; color: #000000;">Mehr
-                                                            erfahren</button> </a> </div>
+                                                <div class="box-leistung---link-container"> 
+                                                    <a href="/" class="box-leistung--link"> 
+                                                        <button
+                                                            class="btn btn-leistung">Mehr
+                                                            erfahren</button> 
+                                                    </a> 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1644,7 +1673,7 @@
                     </div>
                 </div>
 
-                <div class="section beleuchtung-2">
+                <div class="section beleuchtung">
                     <div class="section-inner container">
                         <div class="blocks">
                             <div class="block-item bg-img">  
@@ -2601,7 +2630,8 @@
                 $(".f-video-cover").on("click", function () {
                   var clickId = $(this).attr('id');
                     $(this).fadeOut().siblings('.f-video-player').html(
-                        '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + $("#"+clickId).data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    '<video src="video/kb-led-leuchten-1.mp4" type="video/mp4" autoplay controls style="width: 100%;height: 500px;"></video>'
+                        // /*'<iframe width="560" height="315" src="https://www.youtube.com/embed/' + $("#"+clickId).data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'*/
                     );
                 });
             })();
